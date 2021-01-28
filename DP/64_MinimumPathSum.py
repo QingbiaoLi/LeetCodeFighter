@@ -22,7 +22,7 @@ class Solution(object):
         return memo[y][x]
 
 
-class Solution(object):
+class Solution2(object):
     def minPathSum(self, grid):
         """
         :type grid: List[List[int]]
@@ -32,18 +32,19 @@ class Solution(object):
 
         cost = [[0] * n for _ in range(m)]
 
+        cost[0][0] = grid[0][0]
 
         for i in range(m):
             for j in range(n):
                 if i == 0 and j == 0:
-                    cost[0][0] = grid[0][0]
+                    continue
 
                 if i == 0:
-                    cost[i][j] = grid[i][j] + cost[i][j-1]
+                    cost[i][j] = grid[i][j] + cost[i][j - 1]
                 elif j == 0:
                     cost[i][j] = grid[i][j] + cost[i - 1][j]
                 else:
-                    cost[i][j] = grid[i][j] + min(cost[i - 1][j], cost[i][j-1])
+                    cost[i][j] = grid[i][j] + min(cost[i - 1][j], cost[i][j - 1])
 
 
         return cost[m-1][n-1]
