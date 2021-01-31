@@ -24,5 +24,6 @@ class Solution(object):
 
             else:
                 left = middle + 1
+
         return False
 
