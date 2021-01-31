@@ -24,7 +24,7 @@ class Solution(object):
 
 
 class Solution(object):
-    #https://blog.csdn.net/fuxuemingzhu/article/details/83154114
+
     def uniquePathsWithObstacles(self, obstacleGrid):
         """
         :type obstacleGrid: List[List[int]]
