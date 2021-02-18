@@ -23,8 +23,8 @@ class Solution(object):
         return memo[m][n]
 
 
-class Solution(object):
-    #https://blog.csdn.net/fuxuemingzhu/article/details/83154114
+
+class Solution2(object):
     def uniquePathsWithObstacles(self, obstacleGrid):
         """
         :type obstacleGrid: List[List[int]]
@@ -32,6 +32,7 @@ class Solution(object):
         """
         m, n = len(obstacleGrid), len(obstacleGrid[0])
         dp = [[0] * n for _ in range(m)]
+
         if obstacleGrid[0][0] == 0:
             dp[0][0] = 1
         for i in range(m):

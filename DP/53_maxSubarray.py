@@ -17,7 +17,7 @@ class Solution(object):
         return max(list_max_subArray)
 
 
-class Solution(object):
+class Solution2(object):
     def maxSubArray(self, subArray):
         """
         :type nums: List[int]
@@ -37,3 +37,4 @@ class Solution(object):
                 answer = sum_value
 
         return answer
+
